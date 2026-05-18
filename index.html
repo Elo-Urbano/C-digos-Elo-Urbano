@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elo Urbano — Conectando Comunidades</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Elo<span>Urbano</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#solucao">Solução</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#personas">Personas</a></li>
+        <li><a href="#ods">ODS</a></li>
+        <li><a href="#contato" class="nav-cta">Participar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#sobre" class="mob-link">Sobre</a></li>
+      <li><a href="#problema" class="mob-link">Problema</a></li>
+      <li><a href="#solucao" class="mob-link">Solução</a></li>
+      <li><a href="#funcionalidades" class="mob-link">Funcionalidades</a></li>
+      <li><a href="#personas" class="mob-link">Personas</a></li>
+      <li><a href="#ods" class="mob-link">ODS</a></li>
+      <li><a href="#contato" class="mob-link">Participar</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> Elo Urbano  · Facilitando Novas Conexões
+      </div>
+      <h1 class="hero-title">
+        O mercado local<br /><em>na palma da sua mão.</em>
+      </h1>
+      <p class="hero-desc">
+        Elo Urbano conecta consumidores a pequenos comerciantes, produtores e prestadores de serviço da sua região — com geolocalização, catálogo digital e zero burocracia.
+      </p>
+      <div class="hero-actions">
+        <a href="#solucao" class="btn-primary">Conheça o Projeto</a>
+        <a href="#funcionalidades" class="btn-ghost">Ver Funcionalidades →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="10">Acesso</span><span>M+</span>
+          <p>A pequenos e grandes produtores</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="70">Liberdade</span><span>$</span>
+          <p>Um preço muito mais em conta</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="1">Facilidade</span><span>s2</span>
+          <p>Negociação direto com Fornecedor</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mockup-card">
+        <div class="mockup-top">
+          <div class="mockup-dot red"></div>
+          <div class="mockup-dot yellow"></div>
+          <div class="mockup-dot green"></div>
+          <span class="mockup-title-bar">Elo Urbano · Mapa</span>
+        </div>
+        <div class="mockup-map">
+          <div class="map-pin pin-main" title="Você">📍</div>
+          <div class="map-pin pin-a" title="Padaria do João">🥖</div>
+          <div class="map-pin pin-b" title="Horta da Maria">🥦</div>
+          <div class="map-pin pin-c" title="Oficina do Carlos">🔧</div>
+          <div class="map-ring"></div>
+          <div class="map-ring ring-2"></div>
+        </div>
+        <div class="mockup-list">
+          <div class="mockup-item">
+            <span class="item-icon">🥖</span>
+            <div>
+              <strong>Padaria do João</strong>
+              <small>Pão artesanal · 1,2 km</small>
+            </div>
+            <span class="item-badge">Aberto</span>
+          </div>
+          <div class="mockup-item">
+            <span class="item-icon">🥦</span>
+            <div>
+              <strong>Horta da Maria</strong>
+              <small>Orgânicos · 2,0 km</small>
+            </div>
+            <span class="item-badge">Aberto</span>
+          </div>
+          <div class="mockup-item">
+            <span class="item-icon">🔧</span>
+            <div>
+              <strong>Oficina do Carlos</strong>
+              <small>Serviços · 3,1 km</small>
+            </div>
+            <span class="item-badge closed">Fechado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Role para explorar</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="section-tag">O Projeto</div>
+      <h2 class="section-title">Uma plataforma que <em>coloca o local em primeiro lugar</em></h2>
+      <p class="section-desc">
+        O Elo Urbano nasce como resposta a uma realidade que afeta milhões de brasileiros: pequenos negócios invisíveis no mundo digital e consumidores que não sabem que a solução que buscam está a poucos quarteirões de distância.
+      </p>
+      <div class="sobre-cards">
+        <div class="sobre-card" data-delay="0">
+          <div class="card-icon">🤝</div>
+          <h3>Conexão Direta</h3>
+          <p>Sem intermediários. O consumidor encontra o produtor e faz contato diretamente, preservando a relação humana do comércio local.</p>
+        </div>
+        <div class="sobre-card" data-delay="1">
+          <div class="card-icon">📍</div>
+          <h3>Foco na Proximidade</h3>
+          <p>Geolocalização inteligente que prioriza negócios próximos a você. Fortaleça a economia da sua comunidade.</p>
+        </div>
+        <div class="sobre-card" data-delay="2">
+          <div class="card-icon">🌱</div>
+          <h3>Impacto Sustentável</h3>
+          <p>Alinhado aos ODS da ONU: reduz desigualdades e promove a preservação de ecossistemas econômicos locais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="section problema" id="problema">
+    <div class="container">
+      <div class="section-tag">O Diagnóstico</div>
+      <h2 class="section-title">O problema que <em>nos move</em></h2>
+      <div class="problema-layout">
+        <div class="problema-text">
+          <p>Grandes plataformas dominam o ambiente digital com alto investimento em marketing, enquanto pequenos negócios dependem quase exclusivamente do boca a boca — limitando seu alcance e potencial de crescimento.</p>
+          <p>Do outro lado, consumidores que desejam apoiar o comércio local não encontram canais práticos para descobrir esses produtores. Acabam recorrendo a grandes aplicativos por pura praticidade.</p>
+          <div class="problema-destaque">
+            <blockquote>
+              "Pouca visibilidade, baixa demanda, não sei como anunciar meu produto."
+              <cite>— João, padeiro local</cite>
+            </blockquote>
+          </div>
+        </div>
+        <div class="problema-visual">
+          <div class="gap-diagram">
+            <div class="gap-side gap-left">
+              <div class="gap-icon">🏪</div>
+              <span>Pequeno produtor</span>
+              <ul>
+                <li>❌ Sem presença digital</li>
+                <li>❌ Alcance limitado</li>
+                <li>❌ Sem ferramentas de divulgação</li>
+              </ul>
+            </div>
+            <div class="gap-middle">
+              <div class="gap-arrow">⟷</div>
+              <span class="gap-label">Lacuna<br />de conexão</span>
+            </div>
+            <div class="gap-side gap-right">
+              <div class="gap-icon">👤</div>
+              <span>Consumidor local</span>
+              <ul>
+                <li>❌ Não encontra opções</li>
+                <li>❌ Usa grandes apps</li>
+                <li>❌ Desconhece o local</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section class="section solucao" id="solucao">
+    <div class="container">
+      <div class="section-tag">A Solução</div>
+      <h2 class="section-title">Um app que <em>aproxima comunidades</em></h2>
+      <p class="section-desc">
+        O Elo Urbano é uma plataforma que funciona como vitrine digital para pequenos negócios e como guia de descoberta local para consumidores — com foco total na fase inicial de visibilidade e conexão.
+      </p>
+      <div class="solucao-flow">
+        <div class="flow-step">
+          <div class="flow-num">01</div>
+          <div class="flow-content">
+            <h4>Produtor se cadastra</h4>
+            <p>Com CPF, data de nascimento e documentos, o comerciante cria seu perfil completo na plataforma.</p>
+          </div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">
+          <div class="flow-num">02</div>
+          <div class="flow-content">
+            <h4>Anuncia seus produtos</h4>
+            <p>Sobe catálogo, define horários, localização e canais de contato em sua vitrine digital.</p>
+          </div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">
+          <div class="flow-num">03</div>
+          <div class="flow-content">
+            <h4>Consumidor descobre</h4>
+            <p>Pelo mapa ou busca, o consumidor encontra negócios próximos e entra em contato diretamente.</p>
+          </div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-step">
+          <div class="flow-num">04</div>
+          <div class="flow-content">
+            <h4>Comunidade cresce</h4>
+            <p>A economia local se fortalece. Mais visibilidade, mais vendas, mais impacto social.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section class="section funcionalidades" id="funcionalidades">
+    <div class="container">
+      <div class="section-tag">O Produto</div>
+      <h2 class="section-title">Funcionalidades <em>no escopo</em></h2>
+      <div class="func-grid">
+        <div class="func-card func-featured">
+          <div class="func-card-header">
+            <span class="func-icon">🗺️</span>
+            <span class="func-tag">Principal</span>
+          </div>
+          <h3>Busca & Geolocalização</h3>
+          <p>Ferramenta de busca local com mapa interativo que exibe vendedores cadastrados por proximidade. O consumidor visualiza o endereço físico e a distância em tempo real.</p>
+        </div>
+        <div class="func-card">
+          <div class="func-icon">🏪</div>
+          <h3>Catálogo Digital</h3>
+          <p>Perfis detalhados para os comerciantes com localização, horários, contato e portfólio de produtos e serviços.</p>
+        </div>
+        <div class="func-card">
+          <div class="func-icon">⚙️</div>
+          <h3>Painel do Vendedor</h3>
+          <p>Interface dedicada para cadastro, edição de perfil, anúncio de produtos e gestão básica de presença na plataforma.</p>
+        </div>
+        <div class="func-card">
+          <div class="func-icon">📡</div>
+          <h3>Exposição por Proximidade</h3>
+          <p>Algoritmo que prioriza a exibição de negócios geograficamente próximos ao consumidor, valorizando o hiperlocal.</p>
+        </div>
+      </div>
+
+      <div class="escopo-fora">
+        <h3>🔭 Queremos evolução constante (Teremos em breve)</h3>
+        <div class="fora-tags">
+          <span>Transações In-App</span>
+          <span>Gestão de Entregas</span>
+          <span>Rastreamento de Pedidos</span>
+          <span>Integração com Transportadoras</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAS -->
+  <section class="section personas" id="personas">
+    <div class="container">
+      <div class="section-tag">Usuários</div>
+      <h2 class="section-title">Quem vai <em>usar o Elo Urbano</em></h2>
+      <div class="personas-grid">
+
+        <div class="persona-card">
+          <div class="persona-avatar">🧑‍🍳</div>
+          <div class="persona-info">
+            <div class="persona-role">Vendedor</div>
+            <h3>João</h3>
+            <p class="persona-bio">Trabalha na padaria da família e quer expandir as vendas além do boca a boca do bairro.</p>
+          </div>
+          <div class="persona-section">
+            <strong>Objetivo</strong>
+            <p>Vender mais com maior visibilidade para seus produtos artesanais.</p>
+          </div>
+          <div class="persona-section">
+            <strong>Dores</strong>
+            <ul>
+              <li>Pouca visibilidade</li>
+              <li>Baixa demanda</li>
+              <li>Não sabe como anunciar</li>
+            </ul>
+          </div>
+          <div class="persona-journey">
+            <strong>Jornada no app</strong>
+            <div class="journey-steps">
+              <div class="jstep">Login & Cadastro</div>
+              <div class="jstep">Anuncia Produtos</div>
+              <div class="jstep">Recebe Clientes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-avatar">👩‍🛒</div>
+          <div class="persona-info">
+            <div class="persona-role">Consumidor</div>
+            <h3>Ana</h3>
+            <p class="persona-bio">Moradora do bairro que quer apoiar o comércio local mas não sabe por onde começar a encontrá-los.</p>
+          </div>
+          <div class="persona-section">
+            <strong>Objetivo</strong>
+            <p>Descobrir produtores, comerciantes e serviços locais da sua cidade com facilidade.</p>
+          </div>
+          <div class="persona-section">
+            <strong>Dores</strong>
+            <ul>
+              <li>Não conhece opções locais</li>
+              <li>Usa apps grandes por praticidade</li>
+              <li>Quer consumir de forma consciente</li>
+            </ul>
+          </div>
+          <div class="persona-journey">
+            <strong>Jornada no app</strong>
+            <div class="journey-steps">
+              <div class="jstep">Abre o Mapa</div>
+              <div class="jstep">Encontra Negócios</div>
+              <div class="jstep">Entra em Contato</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ODS -->
+  <section class="section ods" id="ods">
+    <div class="container">
+      <div class="section-tag">Impacto Social</div>
+      <h2 class="section-title">Alinhado aos <em>Objetivos de Desenvolvimento Sustentável</em></h2>
+      <p class="section-desc">O Elo Urbano contribui diretamente com dois dos 17 ODS da ONU, gerando impacto positivo real na sociedade.</p>
+      <div class="ods-cards">
+        <div class="ods-card ods-10">
+          <div class="ods-number"></div>
+          <h3>Redução das Desigualdades</h3>
+          <p>Ao democratizar o acesso a ferramentas digitais para pequenos produtores, o projeto reduz a desigualdade de oportunidades entre micro e grandes negócios, promovendo inclusão econômica.</p>
+          <ul>
+            <li>Acesso igual à tecnologia de divulgação</li>
+            <li>Fortalecimento da economia de base</li>
+            <li>Inclusão digital do pequeno empreendedor</li>
+          </ul>
+        </div>
+        <div class="ods-card ods-15">
+          <div class="ods-number"></div>
+          <h3>Vida Terrestre</h3>
+          <p>Ao conectar consumidores a produtores locais e sustentáveis, o aplicativo incentiva cadeias de consumo mais curtas, com menor pegada de carbono e apoio à agricultura e produção sustentável.</p>
+          <ul>
+            <li>Incentivo ao consumo local sustentável</li>
+            <li>Valorização de produtores orgânicos</li>
+            <li>Redução de cadeia logística poluente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESTRIÇÕES -->
+  <section class="section restricoes" id="restricoes">
+    <div class="container">
+      <div class="section-tag">Desafios Técnicos</div>
+      <h2 class="section-title">Restrições & <em>Considerações</em></h2>
+      <div class="restricoes-grid">
+        <div class="restricao-item">
+          <div class="restricao-icon">⚡</div>
+          <h4>Escalabilidade</h4>
+          <p>A plataforma precisa suportar múltiplos acessos simultâneos conforme cresce, exigindo infraestrutura bem dimensionada.</p>
+        </div>
+        <div class="restricao-item">
+          <div class="restricao-icon">📍</div>
+          <h4>Geolocalização Precisa</h4>
+          <p>A exibição de produtos próximos depende de dados geográficos precisos e atualização constante das localizações.</p>
+        </div>
+        <div class="restricao-item">
+          <div class="restricao-icon">✅</div>
+          <h4>Cadastro e Validação</h4>
+          <p>O processo de cadastro de comerciantes com CPF e documentos deve ser seguro, fluido e acessível para usuários com diferentes níveis de letramento digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="contato-inner">
+        <div class="contato-text">
+          <div class="section-tag">Faça Parte</div>
+          <h2 class="section-title">Quer <em>participar</em> do projeto?</h2>
+          <p>Seja como pequeno comerciante que quer mais visibilidade, consumidor que valoriza o local, ou parceiro que acredita no impacto social — entre em contato.</p>
+        </div>
+        <form class="contato-form" id="contatoForm">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Perfil</label>
+            <select>
+              <option value="">Selecione...</option>
+              <option>Pequeno comerciante / produtor</option>
+              <option>Consumidor interessado</option>
+              <option>Parceiro ou apoiador</option>
+              <option>Imprensa / pesquisador</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea placeholder="Conte um pouco sobre você ou sua ideia..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Enviar Mensagem</button>
+          <div class="form-success" id="formSuccess">
+            ✅ Mensagem enviada! Entraremos em contato em breve.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Elo<span>Urbano</span></div>
+          <p>Conectando comunidades, fortalecendo o comércio local.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <strong>Projeto</strong>
+            <a href="#sobre">Sobre</a>
+            <a href="#problema">Problema</a>
+            <a href="#solucao">Solução</a>
+          </div>
+          <div class="footer-col">
+            <strong>Produto</strong>
+            <a href="#funcionalidades">Funcionalidades</a>
+            <a href="#personas">Usuários</a>
+            <a href="#ods">ODS</a>
+          </div>
+          <div class="footer-col">
+            <strong>Contato</strong>
+            <a href="#contato">Participar</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Projeto Integrador  · <span id="year"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
