@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Fornecedor — Elo Urbano</title>
+  <link rel="stylesheet" href="css/cadastros.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="logo">Elo<span>Urbano</span></a>
+    <a href="index.html" class="nav-voltar">← Voltar ao site</a>
+  </nav>
+
+  <main class="pagina-form">
+
+    <!-- CABEÇALHO -->
+    <div class="form-header">
+      <p class="tag">Preencha Seu Cadastro</p>
+      <h1>Cadastro de <em>Fornecedor</em></h1>
+      <p>Preencha os dados abaixo para cadastrar seu negócio na plataforma e aumentar sua visibilidade na região.</p>
+    </div>
+
+    <form id="formFornecedor" class="form-principal" novalidate>
+
+      <!-- BLOCO 1: DADOS DA EMPRESA -->
+      <div class="bloco">
+        <div class="bloco-titulo">
+          <span class="bloco-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2d6a4f"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></span>
+          <div>
+            <h2>Dados da Empresa</h2>
+            <p>Informações básicas do seu negócio</p>
+          </div>
+        </div>
+        <div class="campos-grid">
+          <div class="campo col-2">
+            <label for="razao-social">Razão Social <span class="obrigatorio">*</span></label>
+            <input id="razao-social" type="text" placeholder="Nome oficial da empresa" required />
+          </div>
+          <div class="campo col-2">
+            <label for="nome-fantasia">Nome Fantasia <span class="obrigatorio">*</span></label>
+            <input id="nome-fantasia" type="text" placeholder="Como é conhecido o negócio" required />
+          </div>
+          <div class="campo col-2">
+            <label for="cnpj">CNPJ <span class="obrigatorio">*</span></label>
+            <input id="cnpj" type="text" placeholder="00.000.000/0000-00" maxlength="18" required />
+          </div>
+          <div class="campo col-2">
+            <label for="inscricao-estadual">Inscrição Estadual <span class="opcional">(opcional)</span></label>
+            <input id="inscricao-estadual" type="text" placeholder="Se possuir" />
+          </div>
+          <div class="campo col-2">
+            <label for="segmento">Segmento / Categoria <span class="obrigatorio">*</span></label>
+            <select id="segmento" required>
+              <option value="">Selecione uma categoria...</option>
+              <option>Alimentação e Bebidas</option>
+              <option>Hortifruti e Orgânicos</option>
+              <option>Artesanato e Manufaturados</option>
+              <option>Serviços Gerais</option>
+              <option>Moda e Vestuário</option>
+              <option>Beleza e Estética</option>
+              <option>Tecnologia e Reparos</option>
+              <option>Saúde e Bem-estar</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="campo col-2">
+            <label for="data-cadastro">Data de Cadastro</label>
+            <input id="data-cadastro" type="date" readonly />
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCO 2: LOCALIZAÇÃO -->
+      <div class="bloco">
+        <div class="bloco-titulo">
+          <span class="bloco-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2d6a4f"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+          <div>
+            <h2>Localização</h2>
+            <p>Endereço físico do seu estabelecimento</p>
+          </div>
+        </div>
+        <div class="campos-grid">
+          <div class="campo col-1">
+            <label for="cep">CEP <span class="obrigatorio">*</span></label>
+            <div class="campo-com-botao">
+              <input id="cep" type="text" placeholder="00000-000" maxlength="9" required />
+              <button type="button" id="btn-cep" class="btn-buscar">Buscar</button>
+            </div>
+          </div>
+          <div class="campo col-3">
+            <label for="rua">Rua / Logradouro <span class="obrigatorio">*</span></label>
+            <input id="rua" type="text" placeholder="Nome da rua" required />
+          </div>
+          <div class="campo col-1">
+            <label for="numero">Número <span class="obrigatorio">*</span></label>
+            <input id="numero" type="text" placeholder="Ex: 123" required />
+          </div>
+          <div class="campo col-2">
+            <label for="bairro">Bairro <span class="obrigatorio">*</span></label>
+            <input id="bairro" type="text" placeholder="Nome do bairro" required />
+          </div>
+          <div class="campo col-2">
+            <label for="cidade">Cidade <span class="obrigatorio">*</span></label>
+            <input id="cidade" type="text" placeholder="Nome da cidade" required />
+          </div>
+          <div class="campo col-1">
+            <label for="estado">Estado <span class="obrigatorio">*</span></label>
+            <select id="estado" required>
+              <option value="">UF</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+              <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+              <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+              <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+              <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+              <option selected>SP</option><option>SE</option><option>TO</option>
+            </select>
+          </div>
+          <div class="campo col-1">
+            <label for="pais">País</label>
+            <input id="pais" type="text" value="Brasil" readonly />
+          </div>
+          <div class="campo col-2">
+            <label for="latitude">Latitude <span class="opcional">(automático)</span></label>
+            <input id="latitude" type="text" placeholder="Ex: -23.5505" readonly />
+          </div>
+          <div class="campo col-2">
+            <label for="longitude">Longitude <span class="opcional">(automático)</span></label>
+            <input id="longitude" type="text" placeholder="Ex: -46.6333" readonly />
+          </div>
+        </div>
+
+        <div class="mini-mapa" id="miniMapa">
+          <div class="mapa-placeholder">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#40916c"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg></span>
+            <p>O ponto no mapa aparecerá após buscar o CEP</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCO 3: CONTATO -->
+      <div class="bloco">
+        <div class="bloco-titulo">
+          <span class="bloco-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2d6a4f"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></span>
+          <div>
+            <h2>Contato</h2>
+            <p>Como os clientes podem te encontrar</p>
+          </div>
+        </div>
+        <div class="campos-grid">
+          <div class="campo col-2">
+            <label for="responsavel">Nome do Responsável <span class="obrigatorio">*</span></label>
+            <input id="responsavel" type="text" placeholder="Nome completo" required />
+          </div>
+          <div class="campo col-2">
+            <label for="telefone">Telefone <span class="obrigatorio">*</span></label>
+            <input id="telefone" type="tel" placeholder="(00) 0000-0000" required />
+          </div>
+          <div class="campo col-2">
+            <label for="whatsapp">WhatsApp <span class="opcional">(opcional)</span></label>
+            <input id="whatsapp" type="tel" placeholder="(00) 00000-0000" />
+          </div>
+          <div class="campo col-2">
+            <label for="email-fornecedor">E-mail <span class="obrigatorio">*</span></label>
+            <input id="email-fornecedor" type="email" placeholder="contato@empresa.com" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- AÇÕES -->
+      <div class="form-acoes">
+        <a href="index.html" class="btn-cancelar">Cancelar</a>
+        <button type="submit" class="btn-enviar">Cadastrar Fornecedor</button>
+      </div>
+
+      <p id="sucessoFornecedor" class="mensagem-sucesso"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#16a34a" style="vertical-align:middle;margin-right:6px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Fornecedor cadastrado com sucesso! Em breve entraremos em contato.</p>
+
+    </form>
+
+    <p class="link-alternativo">
+      É um consumidor? <a href="cadastro_consumidores.html">Crie sua conta aqui →</a>
+    </p>
+
+  </main>
+
+  <footer>
+    <p>Elo<strong>Urbano</strong> · Projeto Integrador · <span id="year"></span></p>
+  </footer>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>
